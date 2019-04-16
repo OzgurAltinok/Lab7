@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +21,13 @@ namespace Lab07
                     if(o is string)
                     {
                         string s = ((string)o);
-                        Console.WriteLine(s);
+                       Console.WriteLine(s);
                     }
                 }
 
                 crawler.ReplaceInWebsite(@"\bH\S*r\b", "buldum");
                 crawler.SaveHtml();
+                Console.ReadKey();
             }
             catch (RegexNotFoundException e)
             {
